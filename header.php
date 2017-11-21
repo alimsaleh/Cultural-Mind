@@ -33,7 +33,7 @@
         </div>
         <div class="navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="home.php">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="explore.php">Explore</a></li>
                 <li><a href="login.php">Login</a></li>
             </ul>
