@@ -1,0 +1,13 @@
+#world-map{
+    margin: 0 auto;
+    width: 1532px;
+    height: 920px;
+    padding: 0;
+}
+
+.world_map_container{
+    margin-top: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
