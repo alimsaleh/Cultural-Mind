@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +22,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style/home.css">
     <link rel="stylesheet" href="style/explore.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/jquery-jvectormap-2.0.3.css">
     <!-- Latest compiled and minified JavaScript -->
@@ -35,8 +40,16 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="explore.php">Explore</a></li>
-                <li><a href="login.php">Login</a></li>
+                <?php
+                if (!isset($_SESSION['login_user'])){
+                    echo '<li><a data-toggle="modal" data-target="#myModal">Login</a></li>';
+                } else {
+                    echo '<li><a href="create_post.php">Create Post</a></li>';
+                    echo '<li><a href="logout.php">Log Out</a></li>';
+                }
+                ?>
             </ul>
         </div>
     </div>
 </nav>
+<?php include_once ('login.php')?>

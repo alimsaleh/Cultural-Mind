@@ -2,13 +2,13 @@
     width: 100%;
 }
 nav{
-    margin-left: 50px;
-    margin-right: 150px;
+    padding-left: 50px;
+    padding-right: 150px;
 
 }
 .navbar{
-    background: transparent;
-    background-color: transparent;
+    background: rgba(0,0,0,0.61);
+    background-color: rgba(0,0,0,0.61);
     border: none;
 }
 
