@@ -21,25 +21,14 @@ $hash = $rows['pwd'];
 
 if (password_verify($password, $hash)) {
     $_SESSION['login_user']=$username; // Initializing Session
-    include_once ('header.php');
-    echo '<h3 class="log_message">Successfully logged in.</h3>';
-    echo "<h3 class='log_message'>Redirecting to home page in 3 seconds.</h3>";
-    echo "<script>setTimeout(function () {
-            window.location = '/';
-        },3000);</script>";
+    $arr = array ('message'=>'success');
 } else {
-    include_once ('header.php');
-    $error = "Username or Password is invalid";
-    echo '<h3 class="log_message">' . $error . '</h3>';
+    $arr = array ('message'=>'error');
 
 }
 
 //Step 4
 mysqli_close($db);
+echo json_encode($arr);
 
 ?>
-
-</body>
-<?php include_once ('footer.php')?>
-
-</html>
