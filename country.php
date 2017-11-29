@@ -1,26 +1,27 @@
 <?php include_once ('header.php');?>
 <style type="text/css">
 	body {
-		background: white;
+        margin-bottom: 50px;
 	}
-	.navbar-fixed-top .navbar-nav>li>a {/*need to fix this*/
-    	color: #337ab7;
-	}
-
 	.content {
-		border: solid 1px green;
-		position: absolute;
-		top: 50px;
+        border: solid 1px red;
+		/*position: absolute;*/
+		/*top: 50px;*/
 		width: 100%;
 	}
-	.filters {
-		border: solid 1px red;
-	}
+    .post {
+        border: solid 1px blue;
+        margin-bottom: 50px;
+    }
+    .filters {
+        /*margin-bottom: 50px;*/
+    }
+
 	.all_posts {
-		border: solid 1px yellow;
-		margin-top: 50px;
+		/*margin-top: 50px;*/
+        /*padding-top: 50px;*/
 		text-align: center;/*needed to center posts*/
-	}
+    }
 	.post_content {
 		border: solid 1px #EFEFEF;
 		margin: auto; /*needed to center posts*/
@@ -30,6 +31,7 @@
 		margin-bottom: 15px; /*double check nothing else gets affected*/
 	}
 	.post_content:hover {
+        cursor: pointer;
     	border: solid 1px #CCC;
 	    -moz-box-shadow: 1px 1px 5px #999;
 	    -webkit-box-shadow: 1px 1px 5px #999;
@@ -103,7 +105,6 @@
   		<button type="button" id="places_btn" class="btn btn-primary col-lg-2 col-md-4 col-sm-4 col-xs-12" value = "places">Places<img style="margin-left:10px;" src="images/place24.png" alt=""></button>
   		<button type="button" id="other_btn" class="btn btn-primary col-lg-2 col-md-4 col-sm-4 col-xs-12" value = "other">Other<img style="margin-left:10px;" src="images/favorites24.png" alt=""></button>
 	</div>
-	<div></div>
 	<div class="all_posts">
 		<?php
 			$country = strtolower($_GET['regionCode']);
@@ -123,7 +124,7 @@
 						echo '<div id="post'.$row['postid'].'_content" class="post_content">';
 							echo'<img id="post'.$row['postid'].'_img" style="width: 100%; height:250px;"src="images/'.$row['imgname'].'">';
 							echo'<img id="post'.$row['postid'].'_tag" style="margin-top:5px;" src="images/'.$row['tag'].'.png" alt="">';
-							// echo'<p id="post'.$row['postid'].'_text">'.$row['text'].'</p>';
+							// echo'<p id=g"post'.$row['postid'].'_text">'.$row['text'].'</p>';
 							echo'<p id="post'.$row['postid'].'_text">Madagascar. It’s more than an incorrect (but fun) DreamWorks movie. Located off the eastern coast of Africa, this island, nearly the size of France and the third largest in the world, has a population over 20 million but sees only about 325,000 tourists a year.1 I spent two weeks there with Intrepid Travel Travel and ... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
 						echo'</div>';
 		    	echo '</div>';
@@ -135,16 +136,8 @@
 			//Step 4
 			mysqli_close($db);
 		 ?>
-		<div id="post6" class="post other col-lg-3 col-md-4 col-sm-6 col-xs-12">
-			<div id="post6_content" class="post_content">
-				<img id="post6_img" style="width: 100%; height:250px;"src="images/img1.jpg">
-				<img id="post6_tag" style="margin-top:5px;" src="images/other.png" alt="">
-				<p id="post6_text">Madagascar. It’s more than an incorrect (but fun) DreamWorks movie. Located off the eastern coast of Africa, this island, nearly the size of France and the third largest in the world, has a population over 20 million but sees only about 325,000 tourists a year.1 I spent two weeks there with Intrepid Travel Travel and ... <button type="button" id="post6_btn" class="btn btn-default">Read More</button></p>
-			</div>
-		</div>
 	</div>
 </div>
-<!-- change what is below to be in the footer -->
 </body>
-<?php //include_once ('footer.php')?>
+<?php include_once ('footer.php')?>
 </html>

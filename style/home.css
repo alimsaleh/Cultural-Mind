@@ -1,27 +1,27 @@
-.carousel{
-    width: 100%;
-}
 nav{
     padding-left: 50px;
-    padding-right: 150px;
+    padding-right: 50px;
 
 }
 .navbar{
-    background: rgba(0,0,0,0.61);
-    background-color: rgba(0,0,0,0.61);
+    background: #3e3e3e;
     border: none;
+    border-radius: 0;
 }
 
-.navbar-fixed-top .navbar-nav>li>a {
+.navbar .navbar-nav>li>a {
     color: white;
 }
 
-.navbar-fixed-top .navbar-nav>li>a:hover {
+.navbar .navbar-nav>li>a:hover {
     color: #a2a2a2;
 }
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
     background-color: transparent;
+}
+nav.navbar.navbar-inverse {
+    margin-bottom: 0px;
 }
 
 #title{
@@ -40,6 +40,7 @@ nav{
 
 .copyright{
     line-height: 30px;
+    text-align: center;
 }
 
 .social{
@@ -50,7 +51,7 @@ nav{
 
 .helplinks{
     line-height: 30px;
-    text-align: right;
+    text-align: center;
 }
 .container {
     width: 100%;

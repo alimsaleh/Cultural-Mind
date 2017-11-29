@@ -29,15 +29,18 @@ session_start();
     <!-- Latest compiled and minified JavaScript -->
 </head>
 <body>
-<nav class="navbar navbar-fixed-top">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                <img alt="Brand" src="">
-            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">WebSiteName</a>
         </div>
-        <div class="navbar-right">
-            <ul class="nav navbar-nav">
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="explore.php">Explore</a></li>
                 <?php

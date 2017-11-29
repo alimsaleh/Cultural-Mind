@@ -24,8 +24,8 @@
 
             onRegionClickevent = function (event, code) {
                 var map = $('#world-map').vectorMap('get', 'mapObject');
-                var name = map.getRegionName(code);
-                window.location.href = "country.php?regionCode=" + name;
+                //var name = map.getRegionName(code);
+                window.location.href = "country.php?regionCode=" + code;
             };
 
             $('#world-map').vectorMap({map: 'world_mill', regionStyle: mapStyle, onRegionClick: onRegionClickevent});
