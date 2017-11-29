@@ -7,12 +7,12 @@
     	color: #337ab7;
 	}
   .main_content {
-    border: solid 1px green;
+    /*border: solid 1px green;*/
     position: absolute;
     top: 50px;
   }
   .post_content {
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     text-align: center; /*needed to center content*/
     width: fit-content;
   }
@@ -27,7 +27,13 @@
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
+		padding-bottom: 60px;
   }
+	@media (max-width: 767px) { /*xs screen*/
+		.post_content > p {
+			padding-bottom: 150px;
+	  }
+	}
 </style>
 <?php
   $postid = strtolower($_GET['postid']);
@@ -60,5 +66,5 @@
    </div>
  </div>
 </body>
-<?php //include_once ('footer.php')?>
+<?php include_once ('footer.php')?>
 </html>

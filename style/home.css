@@ -58,3 +58,16 @@ nav.navbar.navbar-inverse {
     height: 100%;
     padding: 0;
 }
+
+p.p-break {
+  display: none;
+}
+
+@media (max-width: 767px) { /*xs screen*/
+  #btm-img {
+    padding-bottom: 150px;
+  }
+  p.p-break {
+    display: block;
+  }
+}

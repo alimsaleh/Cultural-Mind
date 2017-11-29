@@ -5,13 +5,15 @@
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <img class="img-responsive" src="images/home-left.jpg" alt="">
+            <p class="p-break"></p>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
             <img class="img-responsive" src="images/home-mid1.jpg" alt="">
             <p></p>
             <img class="img-responsive" src="images/home-mid2.jpg" alt="">
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div id="btm-img" class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <p class="p-break"></p>
             <img class="img-responsive" src="images/home-right.jpg" alt="">
         </div>
     </div>

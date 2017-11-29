@@ -1,20 +1,19 @@
 <?php include_once ('header.php');?>
 <style type="text/css">
-	body {
-        margin-bottom: 50px;
-	}
 	.content {
-        border: solid 1px red;
+    /*border: solid 1px red;*/
 		/*position: absolute;*/
 		/*top: 50px;*/
 		width: 100%;
 	}
     .post {
-        border: solid 1px blue;
-        margin-bottom: 50px;
+        /*border: solid 1px blue;*/
+				padding-top: 15px;
+    		padding-bottom: 35px;
     }
-    .filters {
+    .filters > button {
         /*margin-bottom: 50px;*/
+				border-radius: 0;
     }
 
 	.all_posts {
@@ -31,11 +30,17 @@
 		margin-bottom: 15px; /*double check nothing else gets affected*/
 	}
 	.post_content:hover {
-        cursor: pointer;
+      cursor: pointer;
     	border: solid 1px #CCC;
 	    -moz-box-shadow: 1px 1px 5px #999;
 	    -webkit-box-shadow: 1px 1px 5px #999;
 	        box-shadow: 1px 1px 5px #999;
+	}
+	@media (max-width: 767px) { /*xs screen*/
+		.post:last-child {
+			/*border: solid 1px green;*/
+			padding-bottom: 150px;
+		}
 	}
 </style>
 <script>
@@ -47,6 +52,10 @@
 	     $(".food").show();
 	     $(".place").show();
 	     $(".other").show();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 	   $("#clothes_btn").click(function(event){
 	     //alert('clothes btn clicked');
@@ -55,6 +64,10 @@
 	     $(".food").hide();
 	     $(".place").hide();
 	     $(".other").hide();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 	   $("#events_btn").click(function(event){
 	     //alert('events btn clicked');
@@ -63,6 +76,10 @@
 	     $(".food").hide();
 	     $(".place").hide();
 	     $(".other").hide();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 	   $("#food_btn").click(function(event){
 	     //alert('food btn clicked');
@@ -71,6 +88,10 @@
 	     $(".food").show();
 	     $(".place").hide();
 	     $(".other").hide();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 	   $("#places_btn").click(function(event){
 	     //alert('places btn clicked');
@@ -79,6 +100,10 @@
 	     $(".food").hide();
 	     $(".place").show();
 	     $(".other").hide();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 	   $("#other_btn").click(function(event){
 	     //alert('other btn clicked');
@@ -87,12 +112,22 @@
 	     $(".food").hide();
 	     $(".place").hide();
 	     $(".other").show();
+			 if (window.matchMedia('(max-width: 767px)').matches) {
+				 $(".post").css("padding-bottom", "35px");
+				 $(".post:visible:last").css("padding-bottom", "150px");
+			 }
 	   });
 		 $(".post_content").click(function (event){
 			 //alert('clicked on post');
 			 var postid = event.target.id.match(/\d+/)[0];
 			 window.location.href = "post.php?postid=" + postid;
 		 });
+		 $( window ).resize(function() {
+			 if (window.matchMedia('(min-width: 768px)').matches){
+				$(".post").css("padding-top", "15px");
+				$(".post").css("padding-bottom", "35px");
+ 			}
+		});
 	 });
 </script>
 
@@ -138,6 +173,6 @@
 		 ?>
 	</div>
 </div>
-</body>
 <?php include_once ('footer.php')?>
+</body>
 </html>
