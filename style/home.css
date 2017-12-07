@@ -1,3 +1,6 @@
+body{
+    font-family: Helvetica;
+}
 nav{
     padding-left: 50px;
     padding-right: 50px;
@@ -70,4 +73,16 @@ p.p-break {
   p.p-break {
     display: block;
   }
+}
+.main_content {
+    text-align: center;
+}
+.images {
+    padding-bottom: 10%;
+}
+.images > img{
+    margin: auto;
+}
+.about {
+    font-size: 16px;
 }

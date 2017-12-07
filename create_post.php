@@ -8,9 +8,11 @@
         <label for="tag">Tag:</label>
         <select class="form-control" id="tag" name="tag" required>
             <option value="food">Food</option>
-            <option value="culture">Culture</option>
-            <option value="clothes">Clothes</option>
+            <option value="place">Places</option>
+            <option value="cloth">Clothes</option>
             <option value="event">Event</option>
+            <option value="other">Other</option>
+
         </select>
     </div>
     <div class="form-group">
@@ -21,7 +23,7 @@
     </div>
     <div class="form-group">
         <label for="text">Text:</label>
-        <textarea class="form-control" name="text" id="text" rows="15" required></textarea>
+        <textarea class="form-control" name="text" id="text" rows="15" minlength="250" maxlength="10000" required></textarea>
     </div>
     <div class="form-group">
         <label for="upload">Upload an image:</label>
@@ -39,7 +41,7 @@
     $(document).ready(function () {
         $.get( "https://restcountries.eu/rest/v2/all", function( data ) {
             for (var i = 0; i < data.length; i++){
-                $("#country").append('<option value="'+data[i].name+'">' + data[i].name + '</option>');
+                $("#country").append('<option value="'+data[i].alpha2Code+'">' + data[i].name + '</option>');
             }
         });
     });

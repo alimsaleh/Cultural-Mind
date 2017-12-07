@@ -160,7 +160,7 @@
 							echo'<img id="post'.$row['postid'].'_img" style="width: 100%; height:250px;"src="images/'.$row['imgname'].'">';
 							echo'<img id="post'.$row['postid'].'_tag" style="margin-top:5px;" src="images/'.$row['tag'].'.png" alt="">';
 							// echo'<p id=g"post'.$row['postid'].'_text">'.$row['text'].'</p>';
-							echo'<p id="post'.$row['postid'].'_text">Madagascar. It’s more than an incorrect (but fun) DreamWorks movie. Located off the eastern coast of Africa, this island, nearly the size of France and the third largest in the world, has a population over 20 million but sees only about 325,000 tourists a year.1 I spent two weeks there with Intrepid Travel Travel and ... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
+							echo'<p id="post'.$row['postid'].'_text">'.substr($row['text'],0,250).'... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
 						echo'</div>';
 		    	echo '</div>';
 			}
