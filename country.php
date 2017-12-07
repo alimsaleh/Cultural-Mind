@@ -159,7 +159,9 @@
 			//Step3
 			$result = mysqli_query($db, $query);
 			//$row = mysqli_fetch_array($result);
+			$posts_found = 0;
 			while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+					$posts_found = 1;
 		    	echo '<div id="post'.$row['postid'].'" class="post '.$row['tag'].' col-lg-3 col-md-4 col-sm-6 col-xs-12">';
 						echo '<div id="post'.$row['postid'].'_content" class="post_content">';
 							echo'<img id="post'.$row['postid'].'_img" style="width: 100%; height:250px;"src="images/'.$row['imgname'].'">';
@@ -168,6 +170,9 @@
 							echo'<p id="post'.$row['postid'].'_text">'.substr($row['text'],0,250).'... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
 						echo'</div>';
 		    	echo '</div>';
+			}
+			if (!$posts_found) {
+				echo "<br><br><br><h2>Sorry! No one has posted anything for this country :(</h2>";
 			}
 
 			/* free result set */
