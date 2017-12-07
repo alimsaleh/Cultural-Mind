@@ -16,6 +16,8 @@ session_start();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
     <script src="js/jquery-jvectormap-world-mill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.4/quill.js"></script>
+    <script src="//cdn.quilljs.com/1.3.4/quill.min.js"></script>
 
 
     <!-- Latest compiled and minified CSS -->
@@ -26,6 +28,8 @@ session_start();
     <link rel="stylesheet" href="style/post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/jquery-jvectormap-2.0.3.css">
+    <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+
     <!-- Latest compiled and minified JavaScript -->
 </head>
 <body>
