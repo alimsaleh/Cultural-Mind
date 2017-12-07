@@ -45,6 +45,11 @@
 </style>
 <script>
 	$(document).ready(function(){
+		$(window).resize(function(event){
+			if (window.matchMedia('(max-width: 767px)').matches) {
+				$(".post:visible:last").css("padding-bottom", "150px");
+			}
+		});
 	   $("#all_btn").click(function(event){
 	     //alert('all btn clicked');
 	     $(".cloth").show();
