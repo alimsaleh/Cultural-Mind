@@ -5,7 +5,7 @@
         and places unique to each country. Enrich your travel experiences and the world will never cease to amaze you!</p>
     <br>
     <h3>Become Part of the Community</h3>
-    <p class="about">To become a contributing member email jayali@culturalmind.com, and an account will be created for you.<br>
+    <p class="about">To start contributing, login or create an account. <br>
         Start building bridges between communities.</p>
     <br>
     <div class="row">

@@ -8,9 +8,9 @@
                     <p>© 2017 Copyright: Cultural Mind</p>
                 </div>
                 <div class="col-sm-4 social">
-                    <i class="fa fa-instagram"></i>
-                    <i class="fa fa-facebook"></i>
-                    <i class="fa fa-twitter"></i>
+                    <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
 
                 </div>
                 <div class="col-sm-4 helplinks">

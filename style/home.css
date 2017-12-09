@@ -41,6 +41,13 @@ nav.navbar.navbar-inverse {
     color: white;
 }
 
+.social > a {
+    color: white;
+}
+.social > a:hover{
+    color: #2f5bb7;
+}
+
 .copyright{
     line-height: 30px;
     text-align: center;

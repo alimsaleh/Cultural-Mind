@@ -7,7 +7,7 @@
 		width: 100%;
 	}
     .post {
-        /*border: solid 1px blue;*/
+        border: solid 1px rgba(255,255,255,0);
 				padding-top: 15px;
     		padding-bottom: 35px;
     }
