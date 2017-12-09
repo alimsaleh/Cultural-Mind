@@ -61,13 +61,11 @@
     var quill = new Quill('#editor', {
         theme: 'snow'
     });
-    var form = document.querySelector('form');
+    var form = document.querySelector('#post_form');
     form.onsubmit = function(event) {
         // Populate hidden form on submit
-        alert("fdsf");
         var about = document.querySelector('input[name=about]');
         about.value = JSON.stringify(quill.container.firstChild.innerHTML);
-        alert(about.value);
 
         console.log("Submitted", $(form).serialize(), $(form).serializeArray());
 
@@ -80,6 +78,7 @@
             data    : new FormData( form ),
             success : function( data ) {
                 var returnMessage = JSON.parse(data);
+                console.log(returnMessage);
                 if (returnMessage.message === "success"){
                     window.location = "/post.php?postid="+returnMessage.postid;
                 } else {
