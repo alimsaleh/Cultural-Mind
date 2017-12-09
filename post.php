@@ -10,6 +10,7 @@
     /*border: solid 1px green;*/
     position: absolute;
     top: 50px;
+		z-index: -1;
   }
   .post_content {
     /*border: solid 1px red;*/
