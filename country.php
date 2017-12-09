@@ -7,7 +7,7 @@
 		width: 100%;
 	}
     .post {
-        /*border: solid 1px blue;*/
+        border: solid 1px rgba(255,255,255,0);
 				padding-top: 15px;
     		padding-bottom: 35px;
     }
@@ -167,7 +167,7 @@
 							echo'<img id="post'.$row['postid'].'_img" style="width: 100%; height:250px;"src="images/'.$row['imgname'].'">';
 							echo'<img id="post'.$row['postid'].'_tag" style="margin-top:5px;" src="images/'.$row['tag'].'.png" alt="">';
 							// echo'<p id=g"post'.$row['postid'].'_text">'.$row['text'].'</p>';
-							echo'<p id="post'.$row['postid'].'_text">'.substr($row['description'],0,250).'... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
+							echo'<p id="post'.$row['postid'].'_text">'.substr($row['text'],0,250).'... <button type="button" id="post'.$row['postid'].'_btn" class="btn btn-default">Read More</button></p>';
 						echo'</div>';
 		    	echo '</div>';
 			}
