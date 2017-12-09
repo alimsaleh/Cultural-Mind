@@ -15,7 +15,9 @@
                             <input type="password" class="form-control" id="pwd" name="password">
                         </div>
                         <button type="submit" class="btn btn-default">Submit</button>
-                        <p>Note: To ceate a new account please email jayali@culturalmind.com</p>
+                        <br>
+                        <br>
+                        <a href="create_account.php">Create an account</a>
                     </form>
             </div>
 

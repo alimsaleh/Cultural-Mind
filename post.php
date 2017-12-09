@@ -13,7 +13,7 @@
   }
   .post_content {
     /*border: solid 1px red;*/
-    text-align: center; /*needed to center content*/
+    text-align: left; /*needed to center content*/
     width: fit-content;
   }
   .post_content > img {
@@ -23,14 +23,20 @@
     margin-right: 20%;
     margin-bottom: 20px;
   }
-  .post_content > p {
+  .post_text {
+      padding-bottom: 60px;
+  }
+  .post_text {
     width: 60%;
     margin-left: 20%;
     margin-right: 20%;
 		padding-bottom: 60px;
   }
+  .title {
+      text-align: center;
+  }
 	@media (max-width: 767px) { /*xs screen*/
-		.post_content > p {
+		.post_text {
 			padding-bottom: 150px;
 	  }
 	}
@@ -57,9 +63,9 @@
  ?>
  <div class="main_content">
    <div class="post_content">
-     <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo $row['title'];?></h3>
+     <h3 class="title col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo $row['title'];?></h3>
      <img src="images/<?php echo $row['imgname'];?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12" alt="">
-     <p class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo $row['text'];?></p>
+     <div class="post_text col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo $row['text'];?></div>
    </div>
  </div>
 </body>

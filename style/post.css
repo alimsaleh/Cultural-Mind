@@ -1,3 +1,14 @@
 #post_form{
     padding: 70px;
 }
+
+@media (max-width: 767px) { /*xs screen*/
+    #post_form {
+        /*border: solid 1px green;*/
+        padding-bottom: 150px;
+    }
+}
+
+#title{
+    text-align: left;
+}

@@ -1,4 +1,9 @@
 <?php include_once ('header.php')?>
+<style type="text/css">
+    body{
+        background-color: rgba(0,0,0,0.69);
+    }
+</style>
 <div class="container world_map_container">
     <div id="world-map"></div>
     <script>
