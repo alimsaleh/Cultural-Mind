@@ -6,12 +6,6 @@
 	.navbar-fixed-top .navbar-nav>li>a {/*need to fix this*/
     	color: #337ab7;
 	}
-  .main_content {
-    /*border: solid 1px green;*/
-    position: absolute;
-    top: 50px;
-		z-index: -1;
-  }
   .post_content {
     /*border: solid 1px red;*/
     text-align: left; /*needed to center content*/
